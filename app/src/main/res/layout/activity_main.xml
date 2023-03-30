@@ -37,34 +37,37 @@
         android:layout_height="wrap_content"
         android:text=".00"
         android:textSize="20sp"
-
         app:layout_constraintBaseline_toBaselineOf="@+id/second"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/second" />
-
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:text="시작"
-        android:backgroundTint="#2d63e2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toEndOf="@+id/second"
         />
 
     <Button
+        android:id="@+id/button_start"
         android:layout_width="80dp"
         android:layout_height="60dp"
-        android:backgroundTint="#Fff"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/btn_start"
+        android:text="@string/btn_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_refresh"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
         android:layout_marginTop="12dp"
-        android:text="초기화"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/second"
+        android:backgroundTint="@color/btn_restart"
+        android:text="@string/btn_restart"
         android:textColor="#222"
         android:textStyle="bold"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second"
+        app:layout_constraintVertical_bias="0.12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
