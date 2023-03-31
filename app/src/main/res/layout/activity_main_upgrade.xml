@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="66sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/second"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#fff"
+        app:layout_constraintVertical_bias="0.348" />
+
+    <TextView
+        android:id="@+id/second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":00"
+        android:textSize="66sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/minute"
+        app:layout_constraintEnd_toStartOf="@+id/millisecond"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#fff"
+        app:layout_constraintStart_toEndOf="@+id/minute" />
+
+    <TextView
+        android:id="@+id/millisecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=".00"
+        android:textSize="48sp"
+        android:textColor="#fff"
+        app:layout_constraintBaseline_toBaselineOf="@+id/second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintStart_toEndOf="@+id/second" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_blue"
+        android:text="@string/btn_start_eng"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_refresh"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/button_refresh"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_black"
+        android:text="@string/btn_restart_eng"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
